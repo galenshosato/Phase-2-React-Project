@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from "react";
 import Container from "./Container";
 import Header from "./Header";
+import Form from "./Form";
 
 function App() {
     const [movieInfo, setMovies] = useState([])
@@ -17,6 +18,7 @@ function App() {
         <div>
             <Header />
             <Container movieInfo={movieInfo} />
+            <Form setMovies={setMovies} />
         </div>
     )
 }
