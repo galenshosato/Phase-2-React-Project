@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from "react";
 import Container from "./Container";
+import Header from "./Header";
 
 function App() {
     const [movieInfo, setMovies] = useState([])
@@ -14,6 +15,7 @@ function App() {
 
     return(
         <div>
+            <Header />
             <Container movieInfo={movieInfo} />
         </div>
     )
