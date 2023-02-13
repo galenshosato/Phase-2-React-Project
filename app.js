@@ -1,4 +1,4 @@
-
+l
 const options = {
 	method: 'GET',
 	headers: {
@@ -9,5 +9,5 @@ const options = {
 
 fetch('https://imdb8.p.rapidapi.com/title/find?q=game', options)
 	.then(response => response.json())
-	.then(response => console.log(response)
+	.then(response => console.log(response))
 	.catch(err => console.error(err));
