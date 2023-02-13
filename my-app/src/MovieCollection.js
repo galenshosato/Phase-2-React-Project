@@ -1,9 +1,15 @@
 import React from "react";
+import Movie from "./Movie.js"
 
-function MovieCollection(){
+function MovieCollection({movieInfo}){
+
+
+
     return(
         <div>
-            {'render each movie'}
+            {movieInfo.map(movie => <Movie key={movie.id} movie={movie}/>)}
         </div>
     )
 }
+
+export default MovieCollection;

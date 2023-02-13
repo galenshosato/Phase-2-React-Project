@@ -1,9 +1,13 @@
 import React from "react";
 
-function Movie(){
+function Movie({movie}){
     return(
         <div>
-            <img />
+            {/* console.log({movie.title}) */}
+            {/* <h1>{movie.title}</h1> */}
+            <img src={movie.image.url} alt={movie.title} />
         </div>
     )
 }
+
+export default Movie;
