@@ -1,4 +1,5 @@
-movieList = [
+{
+    "MovieList": [
           {
             "id": "/title/tt0944947/",
             "image": {
@@ -1406,4 +1407,4 @@ movieList = [
         ]
 
       
-    
+    }
