@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from "react";
-import MovieCollection from "./MovieCollection";
+import Container from "./Container";
 
 function App() {
     const [movieInfo, setMovies] = useState([])
@@ -10,11 +10,11 @@ function App() {
             .then(data => setMovies(data))
             
     },[])
-    console.log(movieInfo)
+    
 
     return(
         <div>
-            <MovieCollection movieInfo={movieInfo} />
+            <Container movieInfo={movieInfo} />
         </div>
     )
 }
