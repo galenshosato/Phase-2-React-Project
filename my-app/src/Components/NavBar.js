@@ -1,12 +1,12 @@
-
+import { Link } from "react-router-dom"
 
 function NavBar() {
     return (
             <nav>
-                <a href='/'>Home</a>
+                <Link to='/'>Home</Link>
                 {/* <Link>Movie</Link>
                 <Link>Tv Show</Link> */}
-                <a href='/add'>Add Movie/Tv Show</a>
+                <Link to='/add'>Add Movie/Tv Show</Link>
             </nav>
         
     )

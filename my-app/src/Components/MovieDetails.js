@@ -2,22 +2,19 @@ import React, {useEffect, useState} from "react"
 import { useParams } from "react-router-dom"
 
 function MovieDetails () {
-    const [newMovie, setMovie] = useState(null)
-    
-    const {movieID} = useParams()
-    console.log(movieID)
+    const [newMovie, setMovie] = useState()
 
+    const {id} = useParams()
+    
+    
     useEffect(() => {
-        fetch(`http://localhost:4000${movieID}`)
+        fetch(`http://localhost:4000/MovieList/${id}`)
         .then(resp => resp.json())
-        .then((movie) => {
-            setMovie(movie)
-            console.log(movie)
-            
-        })
-    }, [movieID])
-    
-    
+        .then(data => console.log(data))
+        .catch(error => console.log(error))
+    }, [id])
+
+
     
     const movieHour = Math.floor(parseInt(newMovie.runningTimeInMinutes) / 60)
     const movieMin = Math.floor(parseInt(newMovie.runningTimeInMinutes % 60))
