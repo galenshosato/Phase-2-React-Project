@@ -1,19 +1,15 @@
-import React, {useState} from "react";
-import MovieDetails from "./MovieDetails";
+import React from "react";
+import { Link } from "react-router-dom";
+
 
 function Movie({movie}){
-    const [details, setDetails] = useState(false)
 
-    function handleClick(event) {
-        setDetails(prev => !prev)
-    }
+    const movieID = movie.id
+    
     return(
         <div>
             <h3>{movie.title}</h3>
-            <img src={movie.image.url} alt={movie.title} onClick={handleClick} />
-            <div>
-                {details ? <MovieDetails movie={movie} /> : null}
-            </div>
+            <a href={`/movies${movieID}`}> <img src={movie.image.url} alt={movie.title}/></a>
         </div>
         
     )
