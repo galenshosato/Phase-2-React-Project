@@ -12,7 +12,7 @@ img {
   height: auto;
 }
 
-#TVshows {
+#TVshowNavBar {
   display: grid;
   gap: var(--size-3);
   grid-auto-flow: column;
@@ -21,7 +21,7 @@ img {
   overflow-x: auto;
 }
 
-#Movies {
+#MovieNavBar {
   display: grid;
   gap: var(--size-3);
   grid-auto-flow: column;

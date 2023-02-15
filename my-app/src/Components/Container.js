@@ -1,6 +1,5 @@
 import React, {useState} from "react";
 import Card from "./Card.js"
-// import TvShow from "./TvShow.js";
 
 function Container ({movieInfo, movieSearch}) {
 
@@ -22,6 +21,8 @@ function Container ({movieInfo, movieSearch}) {
         <div id='Categories' >
             
             <div  id="TVshows" >
+                <h1>TV Shows</h1>
+                <div id='TVshowNavBar'>
                 {filteredFilms.map(film =>{
                     if(film.titleType === 'tvSeries'){
                         return(
@@ -29,15 +30,19 @@ function Container ({movieInfo, movieSearch}) {
                                 <Card key={film.id} film={film} />
                             </div>)}
                         })}
+                </div>
             </div>
-            <div id='Movies' >    
-                {filteredFilms.map(film =>{
-                    if(film.titleType === 'movie'){
-                        return(
-                            <div>
-                                <Card key={film.id} film={film}/>
-                            </div>)}
+            <div id='Movies' >   
+                <h1>Movies</h1>
+                <div id='MovieNavBar'>
+                    {filteredFilms.map(film =>{
+                        if(film.titleType === 'movie'){
+                            return(
+                                <div>
+                                    <Card key={film.id} film={film}/>
+                                </div>)}
                         })}
+                </div>
             </div>
         </div>
     )

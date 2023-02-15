@@ -5,7 +5,6 @@ function Card({film}){
     return(
         <div>
             <h3>{film.title}</h3>
-            <h6>{film.titleType}</h6>
             <img src={film.image.url} alt={film.title} />
         </div>
     )

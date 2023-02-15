@@ -4,8 +4,7 @@ import Container from "./Components/Container";
 import NavBar from "./Components/NavBar";
 import Form from "./Components/Form";
 import MovieDetails from "./Components/MovieDetails";
-
-import Search from "./Search";
+import Search from "./Components/Search";
 
 
 function App() {
@@ -20,7 +19,7 @@ function App() {
 
     return(
         <div>
-            <NavBar />
+            <NavBar setSearch={setSearch} movieSearch={movieSearch}  />
             <Switch>
                 <Route exact path='/add'>
                     <Form setMovies={setMovies} />
@@ -29,7 +28,7 @@ function App() {
                     <MovieDetails />
                 </Route>
                 <Route  exact path='/'>
-                    <Container movieInfo={movieInfo} />
+                    <Container movieSearch={movieSearch} movieInfo={movieInfo} />
                 </Route>
             </Switch>
         </div>
