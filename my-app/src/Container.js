@@ -20,18 +20,25 @@ function Container ({movieInfo, movieSearch}) {
 
     return( 
         <div id='Categories' >
-            {filteredFilms.map(film =>{
-                if(film.titleType === 'tvSeries'){
-                    return(
-                        <div id="TVshows" >
-                            <Card key={film.id} film={film} />
-                        </div>)}
-                if(film.titleType === 'movie'){
-                    return(
-                        <div id='Movies' >
-                            <Card key={film.id} film={film}/>
-                        </div>)}
-                    })}
+            
+            <div  id="TVshows" >
+                {filteredFilms.map(film =>{
+                    if(film.titleType === 'tvSeries'){
+                        return(
+                            <div>
+                                <Card key={film.id} film={film} />
+                            </div>)}
+                        })}
+            </div>
+            <div id='Movies' >    
+                {filteredFilms.map(film =>{
+                    if(film.titleType === 'movie'){
+                        return(
+                            <div>
+                                <Card key={film.id} film={film}/>
+                            </div>)}
+                        })}
+            </div>
         </div>
     )
 }
