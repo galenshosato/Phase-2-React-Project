@@ -5,7 +5,20 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
 
+img {
+  width: 200px;
+  height: auto;
+}
+
+#Categories {
+  display: grid;
+  gap: var(--size-3);
+  grid-auto-flow: column;
+  grid-auto-columns: 21%;
+
+  overflow-x: auto;
 }
 
 

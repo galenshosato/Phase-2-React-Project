@@ -1,26 +1,37 @@
-import React from "react";
-import Movie from "./Movie.js"
-import TvShow from "./TvShow.js";
+import React, {useState} from "react";
+import Card from "./Card.js"
+// import TvShow from "./TvShow.js";
 
-function Container ({movieInfo}) {
-    let movieList = movieInfo.filter(movie => {
-        return movie.titleType === 'movie'
+function Container ({movieInfo, movieSearch}) {
+
+    const sortedMovieInfo = movieInfo.sort((film_A, film_B) => {
+        if(film_A.titleType.toLowerCase() > film_B.titleType.toLowerCase()){
+            return 1;
+        }
+        else if(film_A.titleType.toLowerCase() < film_B.titleType.toLowerCase()){
+            return -1;
+        }
+        else{
+            return 0;
+        }
     })
 
-    let tvList = movieInfo.filter(movie => {
-        return movie.titleType === 'tvSeries'
-    })
+    const filteredFilms = sortedMovieInfo.filter(films => films.title.toLowerCase().includes(movieSearch.toLowerCase()))
 
-    return(
-        <div>
-            <h2>Movies</h2>
-            {movieList.map(movie => {
-                return <Movie key={movie.id} movie={movie}/>
-            })}
-            <h2>Tv Shows</h2>
-            {tvList.map(tvShow => {
-                return <TvShow key={tvShow.id} tvShow={tvShow} />
-            })}
+    return( 
+        <div id='Categories' >
+            {filteredFilms.map(film =>{
+                if(film.titleType === 'tvSeries'){
+                    return(
+                        <div id="TVshows" >
+                            <Card key={film.id} film={film} />
+                        </div>)}
+                if(film.titleType === 'movie'){
+                    return(
+                        <div id='Movies' >
+                            <Card key={film.id} film={film}/>
+                        </div>)}
+                    })}
         </div>
     )
 }
