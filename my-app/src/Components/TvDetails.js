@@ -1,6 +1,28 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
+import { useParams } from "react-router-dom";
 
-function TvDetails ({show}) {
+function TvDetails () {
+
+    const [show, setShow] = useState(null)
+    const [isLoaded, setIsLoaded] = useState(false)
+
+    const {id} = useParams()
+    
+    
+    useEffect(() => {
+        fetch(`http://localhost:4000/MovieList/${id}`)
+        .then(resp => resp.json())
+        .then(data => {
+            setShow(data)
+            setIsLoaded(true)
+        })
+    }, [id])
+
+
+    if (!isLoaded) {
+        return <h1>Loading...</h1>
+    }
+
     const url0 = `https://www.imdb.com${show.principals[0].id}`
     const url1 = `https://www.imdb.com${show.principals[1].id}`
     const url2 = `https://www.imdb.com${show.principals[2].id}`

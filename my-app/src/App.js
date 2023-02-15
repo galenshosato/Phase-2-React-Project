@@ -4,7 +4,7 @@ import Container from "./Components/Container";
 import NavBar from "./Components/NavBar";
 import Form from "./Components/Form";
 import MovieDetails from "./Components/MovieDetails";
-import Search from "./Components/Search";
+import TvDetails from "./Components/TvDetails";
 
 
 function App() {
@@ -27,8 +27,11 @@ function App() {
                 <Route path='/movies/:id'>
                     <MovieDetails />
                 </Route>
+                <Route path='/tvShow/:id'>
+                    <TvDetails />
+                </Route>    
                 <Route  exact path='/'>
-                    <Container movieSearch={movieSearch} movieInfo={movieInfo} />
+                    <Container movieInfo={movieInfo} movieSearch={movieSearch}/>
                 </Route>
             </Switch>
         </div>
