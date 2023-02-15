@@ -1,11 +1,11 @@
 import React, {useState, useEffect} from "react";
+
+import CollapseE from "./CollapseE"
 import { Route, Switch } from "react-router-dom";
 import Container from "./Components/Container";
 import NavBar from "./Components/NavBar";
 import Form from "./Components/Form";
 import MovieDetails from "./Components/MovieDetails";
-
-import Search from "./Components/Search";
 import TvDetails from "./Components/TvDetails";
 
 
@@ -21,7 +21,8 @@ function App() {
 
     return(
         <div>
-            <NavBar />
+             <CollapseE/>
+            <NavBar movieSearch={movieSearch} setSearch={setSearch}  />
             <Switch>
                 <Route exact path='/add'>
                     <Form setMovies={setMovies} />
