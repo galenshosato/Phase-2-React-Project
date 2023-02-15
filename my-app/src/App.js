@@ -5,16 +5,18 @@ import NavBar from "./Components/NavBar";
 import Form from "./Components/Form";
 import MovieDetails from "./Components/MovieDetails";
 
+import Search from "./Search";
+
 
 function App() {
     const [movieInfo, setMovies] = useState([])
+    const [movieSearch, setSearch] = useState('')
 
     useEffect(()=>{
         fetch('http://localhost:4000/MovieList')
             .then(resp => resp.json())
             .then(data => setMovies(data))
     },[])
-    
 
     return(
         <div>

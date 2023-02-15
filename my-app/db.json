@@ -336,6 +336,9 @@
       ]
     },
     {
+<<<<<<< HEAD
+      "id": "/title/tt4057998/",
+=======
       "akas": [
         "Chuck Taylor aka The Game",
         "The Game"
@@ -413,6 +416,7 @@
     },
     {
       "id": 6,
+>>>>>>> bae96ef229bf00d577df36e282f3ffe9e98f949d
       "image": {
         "height": 802,
         "id": "/title/tt4057998/images/rm4087019265",
@@ -1281,126 +1285,6 @@
             }
           ],
           "startYear": 2020
-        }
-      ]
-    },
-    {
-      "akas": [
-        "Geoffrey A. Thorne"
-      ],
-      "id": "/name/nm0861382/",
-      "image": {
-        "height": 676,
-        "id": "/name/nm0861382/images/rm4193543168",
-        "url": "https://m.media-amazon.com/images/M/MV5BMmE3YjQ3YjgtNzhmOC00NmU5LWFiYmQtNTg5MDc4MGZjMGViXkEyXkFqcGdeQXVyMjQwMDg0Ng@@._V1_.jpg",
-        "width": 708
-      },
-      "legacyNameText": "Thorne, Geoffrey",
-      "name": "Geoffrey Thorne",
-      "knownFor": [
-        {
-          "crew": [
-            {
-              "category": "writer",
-              "endYear": 2021,
-              "episodeCount": 1,
-              "job": "written by",
-              "startYear": 2021
-            },
-            {
-              "category": "producer",
-              "endYear": 2021,
-              "episodeCount": 16,
-              "job": "co-executive producer",
-              "startYear": 2020
-            }
-          ],
-          "summary": {
-            "category": "producer",
-            "displayYear": "2020-2021"
-          },
-          "id": "/title/tt7942796/",
-          "title": "Magnum P.I.",
-          "titleType": "tvSeries",
-          "year": 2018
-        },
-        {
-          "crew": [
-            {
-              "category": "writer",
-              "endYear": 2020,
-              "episodeCount": 1,
-              "job": "written by",
-              "startYear": 2020
-            },
-            {
-              "category": "producer",
-              "endYear": 2021,
-              "episodeCount": 10,
-              "job": "co-executive producer",
-              "startYear": 2020
-            }
-          ],
-          "summary": {
-            "category": "producer",
-            "displayYear": "2020-2021"
-          },
-          "id": "/title/tt10732104/",
-          "title": "Power Book II: Ghost",
-          "titleType": "tvSeries",
-          "year": 2020
-        },
-        {
-          "crew": [
-            {
-              "category": "writer",
-              "endYear": 2010,
-              "episodeCount": 1,
-              "job": "written by",
-              "startYear": 2010
-            }
-          ],
-          "summary": {
-            "category": "writer",
-            "displayYear": "2010"
-          },
-          "id": "/title/tt0275140/",
-          "title": "Law & Order: Criminal Intent",
-          "titleType": "tvSeries",
-          "year": 2001
-        },
-        {
-          "crew": [
-            {
-              "category": "writer",
-              "endYear": 2012,
-              "episodeCount": 5,
-              "job": "written by",
-              "startYear": 2010
-            },
-            {
-              "category": "producer",
-              "endYear": 2012,
-              "episodeCount": 15,
-              "job": "co-producer",
-              "startYear": 2012
-            },
-            {
-              "category": "miscellaneous",
-              "endYear": 2012,
-              "episodeCount": 18,
-              "job": "story editor",
-              "startYear": 2011
-            }
-          ],
-          "summary": {
-            "category": "producer",
-            "displayYear": "2010-2012"
-          },
-          "id": "/title/tt1103987/",
-          "title": "Leverage",
-          "titleType": "tvSeries",
-          "year": 2008
         }
       ]
     }
