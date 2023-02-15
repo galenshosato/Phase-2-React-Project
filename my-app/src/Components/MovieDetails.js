@@ -2,7 +2,8 @@ import React, {useEffect, useState} from "react"
 import { useParams } from "react-router-dom"
 
 function MovieDetails () {
-    const [newMovie, setMovie] = useState()
+    const [newMovie, setMovie] = useState(null)
+    const [isLoaded, setIsLoaded] = useState(false)
 
     const {id} = useParams()
     
@@ -10,10 +11,16 @@ function MovieDetails () {
     useEffect(() => {
         fetch(`http://localhost:4000/MovieList/${id}`)
         .then(resp => resp.json())
-        .then(data => console.log(data))
-        .catch(error => console.log(error))
+        .then(data => {
+            setMovie(data)
+            setIsLoaded(true)
+        })
     }, [id])
 
+
+    if (!isLoaded) {
+        return <h1>Loading...</h1>
+    }
 
     
     const movieHour = Math.floor(parseInt(newMovie.runningTimeInMinutes) / 60)
