@@ -1,9 +1,8 @@
 import React, {useState, useEffect} from "react";
 import { useParams } from "react-router-dom";
 
-function TvDetails () {
+function TvDetails ({show, setShow}) {
 
-    const [show, setShow] = useState(null)
     const [isLoaded, setIsLoaded] = useState(false)
 
     const {id} = useParams()
@@ -26,7 +25,8 @@ function TvDetails () {
     const url0 = `https://www.imdb.com${show.principals[0].id}`
     const url1 = `https://www.imdb.com${show.principals[1].id}`
     const url2 = `https://www.imdb.com${show.principals[2].id}`
-    const episodeUrl = `https:www.imdb.com${show.nextEpisode}`
+    const episodeUrl = `https://www.imdb.com${show.nextEpisode}`
+    const modUrl = `imdb.com${show.nextEpisode}`
 
     return (
         <div>
@@ -38,7 +38,7 @@ function TvDetails () {
                 <span>Episodes: {show.numberOfEpisodes}</span>
                 <span>Runtime: {show.runningTimeInMinutes} min</span>
                 <span>Started: {show.seriesStartYear}</span>
-                {show.seriesEndYear ? <span>Ended: {show.seriesEndYear}</span> : <span>Next Episode: {episodeUrl}</span>}
+                {show.seriesEndYear ? <span>Ended: {show.seriesEndYear}</span> : <span>Next Episode: <a href={episodeUrl} target= "_blank">{modUrl}</a></span>}
 
             </div>
             <div>

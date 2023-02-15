@@ -2,7 +2,7 @@ import React from "react";
 import Card from "./Card.js"
 
 
-function Container ({movieInfo, movieSearch}) {
+function Container ({movieInfo, movieSearch, setMovie}) {
 
     const sortedMovieInfo = movieInfo.sort((film_A, film_B) => {
         if(film_A.titleType.toLowerCase() > film_B.titleType.toLowerCase()){

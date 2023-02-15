@@ -2,6 +2,19 @@ import React from "react";
 
 function Form ({setMovies}) {
 
+    function actorHandle (array) {    
+    let words = array.split(',')
+    let wordsArray = []
+    let i
+    for (i = 0; i < words.length; i++) {
+        wordsArray.push({name: words[i]})
+    }
+
+    return wordsArray
+ }
+
+ 
+
     function handleSubmit (event) {
         event.preventDefault()
         let newMovie = {
@@ -10,9 +23,7 @@ function Form ({setMovies}) {
                 url : event.target.image.value
             },
             titleType: event.target.type.value,
-            principals : {
-                name: event.target.actors.value
-            },
+            principals : actorHandle(event.target.actors.value),
             description : event.target.description.value
         }
 
@@ -24,8 +35,8 @@ function Form ({setMovies}) {
             body: JSON.stringify(newMovie)
         })
         .then(resp => resp.json())
+        .then(setMovies(prev => [...prev, newMovie]))
         
-        setMovies(prev => [...prev, newMovie])
 
         
     }

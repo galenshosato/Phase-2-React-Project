@@ -12,6 +12,8 @@ import TvDetails from "./Components/TvDetails";
 function App() {
     const [movieInfo, setMovies] = useState([])
     const [movieSearch, setSearch] = useState('')
+    const [show, setShow] = useState(null)
+    const [newMovie, setNewMovie] = useState(null)
 
     useEffect(()=>{
         fetch('http://localhost:4000/MovieList')
@@ -22,16 +24,16 @@ function App() {
     return(
         <div>
              <CollapseE/>
-            <NavBar movieSearch={movieSearch} setSearch={setSearch}  />
+            <NavBar movieSearch={movieSearch} setSearch={setSearch} />
             <Switch>
                 <Route exact path='/add'>
                     <Form setMovies={setMovies} />
                 </Route>
                 <Route path='/movies/:id'>
-                    <MovieDetails />
+                    <MovieDetails newMovie={newMovie} setNewMovie={setNewMovie}/>
                 </Route>
                 <Route path='/tvShow/:id'>
-                    <TvDetails />
+                    <TvDetails setShow ={setShow} show={show} />
                 </Route>
                 <Route  exact path='/'>
                     <Container movieInfo={movieInfo} movieSearch={movieSearch} />
