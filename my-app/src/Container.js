@@ -10,7 +10,8 @@ function Container ({movieInfo}) {
     let tvList = movieInfo.filter(movie => {
         return movie.titleType === 'tvSeries'
     })
-
+    console.log(Movie)
+   
     return(
         <div>
             <h2>Movies</h2>
