@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom"
+import Search from "./Search"
 
 function NavBar() {
     return (
@@ -7,6 +8,7 @@ function NavBar() {
                 {/* <Link>Movie</Link>
                 <Link>Tv Show</Link> */}
                 <Link to='/add'>Add Movie/Tv Show</Link>
+                
             </nav>
         
     )
