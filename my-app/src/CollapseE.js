@@ -4,6 +4,8 @@ import Collapse from 'react-bootstrap/Collapse';
 import Fade from './Fade'
 import Slider from  './Slider'
 
+
+
 function CollapseE() {
   const [open, setOpen] = useState(false);
 
@@ -30,4 +32,4 @@ function CollapseE() {
 }
 
 
-export default CollapseE
+export default CollapseE;
