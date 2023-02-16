@@ -1214,7 +1214,8 @@
         "url": "https://m.media-amazon.com/images/M/MV5BMTMxOTQxMzIwN15BMl5BanBnXkFtZTcwODUxNTE0Ng@@._V1_.jpg"
       },
       "title": "Theatre of the Deranged III",
-      "titleType": "Galens_movies",
+      "AltTitleType": "galen",
+      "titleType": "movie",
       "year": 2019,
       "runningTimeInMinutes": 70
     },
@@ -1224,7 +1225,8 @@
         "url": "https://m.media-amazon.com/images/M/MV5BMzYzMTQ0MjA1NF5BMl5BanBnXkFtZTcwOTU5Nzc4OA@@._V1_.jpg"
       },
       "title": "Tommorow's End",
-      "titleType": "Galens_movies",
+      "AltTitleType": "galen",
+      "titleType": "movie",
       "year": 2016,
       "runningTimeInMinutes": 95
     },
@@ -1234,7 +1236,8 @@
           "url": "https://m.media-amazon.com/images/M/MV5BOTYxN2MwNDEtODNjNi00MzJhLWFmOTUtMzExYzZiZmY1MjcyL2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyNjA0Nzc5MTg@._V1_.jpg"
         },
         "title": "Room for Improvement",
-        "titleType": "Galens_movies",
+        "AltTitleType": "galen",
+        "titleType": "movie",
         "year": 2015,
         "runningTimeInMinutes": 30
     },
@@ -1244,7 +1247,8 @@
           "url": "https://m.media-amazon.com/images/M/MV5BYjJlYjZjOTAtZWFmNC00YjVmLTlhOTUtNjU3YjlkMDg4Yzc5XkEyXkFqcGdeQXVyODA1MjAzMg@@._V1_.jpg"
         },
         "title": "Forgotten Kingdom: Genesis",
-        "titleType": "Galens_movies",
+        "AltTitleType": "galen",
+        "titleType": "movie",
         "year": 2015,
         "runningTimeInMinutes": 93
     },
@@ -1254,7 +1258,8 @@
           "url": "https://images.squarespace-cdn.com/content/v1/5e7a8bef263f9758837805df/1585592984623-8RD74T2342N0TUV1GXRY/L17+copy.jpg?format=500w"
         },
         "title": "A New Year’s Experience",
-        "titleType": "Galens_movies",
+        "AltTitleType": "galen",
+        "titleType": "tvSeries",
         "year": 2014
     },
     {
@@ -1263,7 +1268,8 @@
           "url": "https://images.squarespace-cdn.com/content/v1/5e7a8bef263f9758837805df/1585592984623-8RD74T2342N0TUV1GXRY/L17+copy.jpg?format=500w"
         },
         "title": "A Day for Cookies",
-        "titleType": "Galens_movies",
+        "AltTitleType": "galen",
+        "titleType": "tvSeries",
         "year": 2014
     },
     {
@@ -1272,7 +1278,8 @@
           "url": "https://images.squarespace-cdn.com/content/v1/5e7a8bef263f9758837805df/1585592984623-8RD74T2342N0TUV1GXRY/L17+copy.jpg?format=500w"
         },
         "title": "I Am",
-        "titleType": "Galens_movies",
+        "titleType": "tvSeries",
+        "AltTitleType": "galen",
         "year": 2013,
         "runningTimeInMinutes": 14
     },
@@ -1282,7 +1289,8 @@
           "url": "https://m.media-amazon.com/images/M/MV5BNzg2MjYxMDItMzlmNS00ZGQ3LTk3NzEtMmE2N2Y1MjY3YzI4XkEyXkFqcGdeQXVyMDI4NjM1MQ@@._V1_.jpg"
         },
         "title": "Ambushed",
-        "titleType": "Galens_movies",
+        "titleType": "tvSeries",
+        "AltTitleType": "galen",
         "year": 2013,
         "runningTimeInMinutes": 96
     },
@@ -1292,7 +1300,8 @@
           "url": "https://images.squarespace-cdn.com/content/v1/5e7a8bef263f9758837805df/1585592984623-8RD74T2342N0TUV1GXRY/L17+copy.jpg?format=500w"
         },
         "title": "Edible Love",
-        "titleType": "Galens_movies",
+        "AltTitleType": "galen",
+        "titleType": "movie",
         "year": 2013,
         "runningTimeInMinutes": 12
     },
@@ -1302,7 +1311,8 @@
           "url": "https://m.media-amazon.com/images/M/MV5BZmRlMWEzMWUtNWViZi00NWM5LWJiZTItMGUyM2I2NWFjNzk1L2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyMzgzMjk0Mg@@._V1_.jpg"
         },
         "title": "Scream, Zombie Scream",
-        "titleType": "Galens_movies",
+        "AltTitleType": "galen",
+        "titleType": "tvSeries",
         "year": 2012
     },
 
@@ -1315,7 +1325,8 @@
       "id": 29,
       "title": "Extremely Wicked, Shockingly Evil and Vile",
       "q": "feature",
-      "titleType": "Serial_Killers",
+      "AltTitleType": "serial",
+      "titleType": "movie",
       "rank": 3882,
       "s": "Lily Collins, Zac Efron",
       "year": 2019
@@ -1336,7 +1347,8 @@
           "seriesEndYear": 2022,
           "seriesStartYear": 2022,
           "title": "Dahmer - Monster: The Jeffrey Dahmer Story",
-          "titleType": "Serial_Killers",
+          "AltTitleType": "serial",
+          "titleType": "movie",
           "year": 2022,
           "principals": [
             {
@@ -1409,7 +1421,8 @@
               "seriesEndYear": 2019,
               "seriesStartYear": 2017,
               "title": "Mindhunter",
-              "titleType": "Serial_Killers",
+              "AltTitleType": "serial",
+              "titleType": "tvSeries",
               "year": 2017,
               "principals": [
                 {
@@ -1483,7 +1496,8 @@
                   },
                   "runningTimeInMinutes": 85,
                   "title": "The Hatchet Wielding Hitchhiker",
-                  "titleType": "Serial_Killers",
+                  "AltTitleType": "serial",
+                  "titleType": "movie",
                   "year": 2023,
                   "principals": [
                     {
@@ -1550,7 +1564,8 @@
                       "seriesEndYear": 2019,
                       "seriesStartYear": 2019,
                       "title": "The Devil Next Door",
-                      "titleType": "Serial_Killers",
+                      "AltTitleType": "serial",
+                      "titleType": "tvSeries",
                       "year": 2019,
                       "principals": [
                         {
@@ -1622,7 +1637,8 @@
                           "seriesEndYear": 2019,
                           "seriesStartYear": 2019,
                           "title": "The Confession Killer",
-                          "titleType": "Serial_Killers",
+                          "AltTitleType": "serial",
+                          "titleType": "tvSeries",
                           "year": 2019,
                           "principals": [
                             {
@@ -1698,7 +1714,8 @@
                               "seriesEndYear": 2019,
                               "seriesStartYear": 2019,
                               "title": "Conversations with a Killer: The Ted Bundy Tapes",
-                              "titleType": "Serial_Killers",
+                              "AltTitleType": "serial",
+                              "titleType": "tvSeries",
                               "year": 2019,
                               "principals": [
                                 {
@@ -1770,7 +1787,8 @@
                                   "seriesEndYear": 2022,
                                   "seriesStartYear": 2022,
                                   "title": "Inventing Anna",
-                                  "titleType": "tvMiniSeries",
+                                  "AltTitleType": "serial",
+                                  "titleType": "tvSeries",
                                   "year": 2022,
                                   "principals": [
                                     {
@@ -1837,7 +1855,8 @@
                                       },
                                       "runningTimeInMinutes": 83,
                                       "title": "Why Did You Kill Me?",
-                                      "titleType": "Serial_Killers",
+                                      "AltTitleType": "serial",
+                                      "titleType": "movie",
                                       "year": 2021,
                                       "principals": [
                                         {
@@ -1899,7 +1918,8 @@
                                           },
                                           "runningTimeInMinutes": 94,
                                           "title": "Capturing the Killer Nurse",
-                                          "titleType": "Serial_Killers",
+                                          "AltTitleType": "serial",
+                                          "titleType": "movie",
                                           "year": 2022,
                                           "principals": [
                                             {
@@ -1966,7 +1986,8 @@
                                     },
                                     "runningTimeInMinutes": 96,
                                     "title": "Murder to Mercy: The Cyntoia Brown Story",
-                                    "titleType": "Serial_Killers",
+                                    "AltTitleType": "serial",
+                                    "titleType": "movie",
                                     "year": 2020
                                   }
 
