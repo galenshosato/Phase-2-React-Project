@@ -1,5 +1,4 @@
 import React, {useState, useEffect} from "react";
-
 import CollapseE from "./CollapseE"
 import { Route, Switch } from "react-router-dom";
 import Container from "./Components/Container";

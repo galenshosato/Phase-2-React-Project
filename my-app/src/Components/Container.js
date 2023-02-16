@@ -27,22 +27,52 @@ function Container ({movieInfo, movieSearch, movieLoad}) {
         <div id='Categories' >
             
             <div  id="TVshows" >
+                <h3>TV Shows</h3>
+                <div id='TVshowNavBar'>
                 {filteredFilms.map(film =>{
                     if(film.titleType === 'tvSeries'){
                         return(
-                            <div>
+                            <div id = "card">
                                 <Card key={film.id} film={film} />
                             </div>)}
                         })}
+                </div>
             </div>
-            <div id='Movies' >    
-                {filteredFilms.map(film =>{
-                    if(film.titleType === 'movie'){
-                        return(
-                            <div>
-                                <Card key={film.id} film={film}/>
-                            </div>)}
+            <div id='Movies' >   
+                <h3>Movies</h3>
+                <div id='MovieNavBar'>
+                    {filteredFilms.map(film =>{
+                        if(film.titleType === 'movie'){
+                            return(
+                                <div id = "card">
+                                    <Card key={film.id} film={film}/>
+                                </div>)}
                         })}
+                </div>
+            </div>
+            <div id='Galen' >   
+                <h3>Galen Sato's Featured Films</h3>
+                <div id='Galen_nav_bar'>
+                    {filteredFilms.map(film =>{
+                        if(film.titleType === "Galens_movies"){
+                            return(
+                                <div id = "card">
+                                    <Card key={film.id} film={film}/>
+                                </div>)}
+                        })}
+                </div>
+            </div>
+            <div id='SerialKillers' >   
+                <h3>Serial Killers</h3>
+                <div id='SerialKiller_navbar'>
+                    {filteredFilms.map(film =>{
+                        if(film.titleType === "Serial_Killers"){
+                            return(
+                                <div id = "card">
+                                    <Card key={film.id} film={film}/>
+                                </div>)}
+                        })}
+                </div>
             </div>
         </div>
     )
