@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from "react";
 import { useParams } from "react-router-dom";
 
-function TvDetails ({show, setShow}) {
+function TvDetails ({show, setShow, setType}) {
 
     const [isLoaded, setIsLoaded] = useState(false)
 
@@ -14,6 +14,7 @@ function TvDetails ({show, setShow}) {
         .then(data => {
             setShow(data)
             setIsLoaded(true)
+            setType('tv')
         })
     }, [id])
 

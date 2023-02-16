@@ -12,9 +12,10 @@ import TvDetails from "./Components/TvDetails";
 function App() {
     const [movieInfo, setMovies] = useState([])
     const [movieSearch, setSearch] = useState('')
-    const [show, setShow] = useState(null)
-    const [newMovie, setNewMovie] = useState(null)
+    const [show, setShow] = useState([])
+    const [newMovie, setNewMovie] = useState([])
     const [movieLoad, setMovieLoad] = useState(false)
+    const [type, setType] = useState(null)
 
     useEffect(()=>{
         fetch('http://localhost:4000/MovieList')
@@ -28,16 +29,16 @@ function App() {
     return(
         <div>
              <CollapseE/>
-            <NavBar movieSearch={movieSearch} setSearch={setSearch} />
+            <NavBar movieSearch={movieSearch} setSearch={setSearch} newMovie={newMovie} show={show} type={type} />
             <Switch>
                 <Route exact path='/add'>
                     <Form setMovies={setMovies} setMovieLoad={setMovieLoad} />
                 </Route>
                 <Route path='/movies/:id'>
-                    <MovieDetails newMovie={newMovie} setNewMovie={setNewMovie}/>
+                    <MovieDetails newMovie={newMovie} setNewMovie={setNewMovie} setType={setType}/>
                 </Route>
                 <Route path='/tvShow/:id'>
-                    <TvDetails setShow ={setShow} show={show} />
+                    <TvDetails setShow ={setShow} show={show} setType={setType} />
                 </Route>
                 <Route  exact path='/'>
                     <Container movieInfo={movieInfo} movieSearch={movieSearch} movieLoad={movieLoad} />

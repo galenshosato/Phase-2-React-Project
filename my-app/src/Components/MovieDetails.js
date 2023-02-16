@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from "react"
 import { useParams } from "react-router-dom"
 
-function MovieDetails ({newMovie, setNewMovie}) {
+function MovieDetails ({newMovie, setNewMovie, setType}) {
     const [isLoaded, setIsLoaded] = useState(false)
 
     const {id} = useParams()
@@ -13,6 +13,7 @@ function MovieDetails ({newMovie, setNewMovie}) {
         .then(data => {
             setNewMovie(data)
             setIsLoaded(true)
+            setType('movie')
         })
     }, [id])
 
