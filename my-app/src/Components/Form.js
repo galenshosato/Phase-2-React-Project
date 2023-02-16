@@ -1,18 +1,35 @@
 import React from "react";
+import { useHistory } from "react-router-dom";
 
-function Form ({setMovies}) {
+function Form ({setMovies, setMovieLoad}) {
+    const history = useHistory()
+
+    function actorHandle (array) {    
+    let words = array.split(',')
+    let wordsArray = []
+    let idArray = ["/name/nm5512500", "/name/nm8994451", "/name/nm6459603"]
+    for (let i = 0; i < words.length; i++) {
+        wordsArray.push({
+            name: words[i],
+            id: idArray[i]
+        })
+    }
+
+    return wordsArray
+ }
+
+ 
 
     function handleSubmit (event) {
         event.preventDefault()
+        setMovieLoad(prev => !prev)
         let newMovie = {
             title : event.target.title.value,
             image : {
                 url : event.target.image.value
             },
             titleType: event.target.type.value,
-            principals : {
-                name: event.target.actors.value
-            },
+            principals : actorHandle(event.target.actors.value),
             description : event.target.description.value
         }
 
@@ -24,9 +41,13 @@ function Form ({setMovies}) {
             body: JSON.stringify(newMovie)
         })
         .then(resp => resp.json())
-        
-        setMovies(prev => [...prev, newMovie])
+        .then(data => {
+            setMovies(prev => [...prev, data])
+            setMovieLoad(true)
+            history.push('/')
+        })
 
+        
         
     }
 
@@ -74,7 +95,7 @@ function Form ({setMovies}) {
                 <input 
                     type='text'
                     name='description'
-                    placeholder="Enter a description"
+                    placeholder="Description..."
                 />
             </div>
             <div>
