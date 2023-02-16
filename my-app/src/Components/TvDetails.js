@@ -19,7 +19,7 @@ function TvDetails ({show, setShow}) {
 
 
     if (!isLoaded) {
-        return <h1>Loading...</h1>
+        return <h1>Getflix</h1>
     }
 
     const url0 = `https://www.imdb.com${show.principals[0].id}`
@@ -27,6 +27,7 @@ function TvDetails ({show, setShow}) {
     const url2 = `https://www.imdb.com${show.principals[2].id}`
     const episodeUrl = `https://www.imdb.com${show.nextEpisode}`
     const modUrl = `imdb.com${show.nextEpisode}`
+    const endYear = show.seriesEndYear ? <span>Ended: {show.seriesEndYear}</span> : <span>Next Episode: <a href={episodeUrl} target= "_blank">{modUrl}</a></span>
 
     return (
         <div>
@@ -37,15 +38,15 @@ function TvDetails ({show, setShow}) {
             <div>
                 <span>Episodes: {show.numberOfEpisodes}</span>
                 <span>Runtime: {show.runningTimeInMinutes} min</span>
-                <span>Started: {show.seriesStartYear}</span>
-                {show.seriesEndYear ? <span>Ended: {show.seriesEndYear}</span> : <span>Next Episode: <a href={episodeUrl} target= "_blank">{modUrl}</a></span>}
+                {show.seriesStartYear ? <span>Started: {show.seriesStartYear}</span> : null}
+                {show.seriesStartYear ? endYear : null}
 
             </div>
             <div>
                 <h4>Actors: 
-                    <a href={url0}>{show.principals[0].name}</a>
-                    <a href={url1}>{show.principals[1].name}</a>
-                    <a href={url2}>{show.principals[2].name}</a>
+                    <a href={url0} target="_blank">{show.principals[0].name}</a>
+                    <a href={url1} target="_blank">{show.principals[1].name}</a>
+                    <a href={url2} target="_blank">{show.principals[2].name}</a>
                 </h4>
             </div>
         </div>
