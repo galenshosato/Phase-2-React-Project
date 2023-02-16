@@ -14,6 +14,7 @@ function Container ({movieInfo, movieSearch}) {
             return 0;
         }
     })
+    console.log(sortedMovieInfo.filter(galenFilm => galenFilm.titleType === 'Galens_movies'))
 
     const filteredFilms = sortedMovieInfo.filter(films => films.title.toLowerCase().includes(movieSearch.toLowerCase()))
 
@@ -21,24 +22,48 @@ function Container ({movieInfo, movieSearch}) {
         <div id='Categories' >
             
             <div  id="TVshows" >
-                <h1>TV Shows</h1>
+                <h3>TV Shows</h3>
                 <div id='TVshowNavBar'>
                 {filteredFilms.map(film =>{
                     if(film.titleType === 'tvSeries'){
                         return(
-                            <div>
+                            <div id = "card">
                                 <Card key={film.id} film={film} />
                             </div>)}
                         })}
                 </div>
             </div>
             <div id='Movies' >   
-                <h1>Movies</h1>
+                <h3>Movies</h3>
                 <div id='MovieNavBar'>
                     {filteredFilms.map(film =>{
                         if(film.titleType === 'movie'){
                             return(
-                                <div>
+                                <div id = "card">
+                                    <Card key={film.id} film={film}/>
+                                </div>)}
+                        })}
+                </div>
+            </div>
+            <div id='Galen' >   
+                <h3>Galen Sato's Featured Films</h3>
+                <div id='Galen_nav_bar'>
+                    {filteredFilms.map(film =>{
+                        if(film.titleType === "Galens_movies"){
+                            return(
+                                <div id = "card">
+                                    <Card key={film.id} film={film}/>
+                                </div>)}
+                        })}
+                </div>
+            </div>
+            <div id='SerialKillers' >   
+                <h3>Serial Killers</h3>
+                <div id='SerialKiller_navbar'>
+                    {filteredFilms.map(film =>{
+                        if(film.titleType === "Serial_Killers"){
+                            return(
+                                <div id = "card">
                                     <Card key={film.id} film={film}/>
                                 </div>)}
                         })}

@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from "react";
+import CollapseE from "./CollapseE"
 import { Route, Switch } from "react-router-dom";
 import Container from "./Components/Container";
 import NavBar from "./Components/NavBar";
@@ -19,6 +20,7 @@ function App() {
 
     return(
         <div>
+            <CollapseE />
             <NavBar setSearch={setSearch} movieSearch={movieSearch}  />
             <Switch>
                 <Route exact path='/add'>

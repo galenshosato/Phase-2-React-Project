@@ -10,6 +10,7 @@ function NavBar({movieSearch, setSearch}) {
                 <Link to='/add'>Add Movie/Tv Show</Link>
                 <Search setSearch={setSearch} movieSearch={movieSearch} />
             </nav>
+
         
     )
 
