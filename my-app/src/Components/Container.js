@@ -1,7 +1,9 @@
 import React from "react";
 import Card from "./Card.js"
 
-function Container ({movieInfo, movieSearch}) {
+
+function Container ({movieInfo, movieSearch, movieLoad}) {
+    
 
     const sortedMovieInfo = movieInfo.sort((film_A, film_B) => {
         if(film_A.titleType.toLowerCase() > film_B.titleType.toLowerCase()){
@@ -14,9 +16,12 @@ function Container ({movieInfo, movieSearch}) {
             return 0;
         }
     })
-    console.log(sortedMovieInfo.filter(galenFilm => galenFilm.titleType === 'Galens_movies'))
 
     const filteredFilms = sortedMovieInfo.filter(films => films.title.toLowerCase().includes(movieSearch.toLowerCase()))
+
+    if (!movieLoad) {
+        return <h1>Getflix</h1>
+     }
 
     return( 
         <div id='Categories' >

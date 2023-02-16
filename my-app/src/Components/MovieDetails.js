@@ -1,8 +1,7 @@
 import React, {useEffect, useState} from "react"
 import { useParams } from "react-router-dom"
 
-function MovieDetails () {
-    const [newMovie, setMovie] = useState(null)
+function MovieDetails ({newMovie, setNewMovie, setType}) {
     const [isLoaded, setIsLoaded] = useState(false)
 
     const {id} = useParams()
@@ -12,14 +11,15 @@ function MovieDetails () {
         fetch(`http://localhost:4000/MovieList/${id}`)
         .then(resp => resp.json())
         .then(data => {
-            setMovie(data)
+            setNewMovie(data)
             setIsLoaded(true)
+            setType('movie')
         })
     }, [id])
 
 
     if (!isLoaded) {
-        return <h1>Loading...</h1>
+        return <h1>Getflix</h1>
     }
 
     
@@ -36,15 +36,18 @@ function MovieDetails () {
                 <h2>{newMovie.title}</h2>
             </div>
             <div>
-                <span>Year: {newMovie.year}</span>
-                <span>Runtime: {movieHour}h {movieMin}min</span>
+                {newMovie.year ? <span>Year: {newMovie.year}</span> : null}
+                {newMovie.runningTimeInMinutes ? <span>Runtime: {movieHour}h {movieMin}min</span> : null}
             </div>
             <div>
                 <h4>Actors: 
-                    <a href={url0}>{newMovie.principals[0].name}</a>
-                    <a href={url1}>{newMovie.principals[1].name}</a>
-                    <a href={url2}>{newMovie.principals[2].name}</a>
+                    <a href={url0} target="_blank">{newMovie.principals[0].name}</a>
+                    <a href={url1} target="_blank">{newMovie.principals[1].name}</a>
+                    <a href={url2} target="_blank">{newMovie.principals[2].name}</a>
                 </h4>
+            </div>
+            <div>
+                <i>{newMovie.description}</i>
             </div>
         </div>
         
