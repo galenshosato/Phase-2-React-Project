@@ -1,3 +1,8 @@
+header {
+  height: 100%;
+  width: 100%; 
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,28 +10,29 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  height: 100%;
+  width: 100%;
+
 }
 
 img {
   width: 200px;
-  height: auto;
+  height: 300px;
 }
 
-#TVshows {
+#TVshowNavBar {
   display: grid;
   gap: var(--size-3);
   grid-auto-flow: column;
-  grid-auto-columns: 21%;
-
+  grid-auto-columns: 14.2%;
   overflow-x: auto;
 }
 
-#Movies {
+#MovieNavBar {
   display: grid;
   gap: var(--size-3);
   grid-auto-flow: column;
-  grid-auto-columns: 21%;
-
+  grid-auto-columns: 14.2%;
   overflow-x: auto;
 }
 
@@ -44,4 +50,82 @@ img {
     0 0 102px #0fa,
     0 0 151px #0fa;
 }
+#Galen_nav_bar {
+  display: grid;
+  gap: var(--size-3);
+  grid-auto-flow: column;
+  grid-auto-columns: 14.2%;
+  overflow-x: auto;
+}
+
+#SerialKiller_navbar {
+  display: grid;
+  gap: var(--size-3);
+  grid-auto-flow: column;
+  grid-auto-columns: 14.2%;
+  overflow-x: auto;
+}
+
+#searchfor img {
+  width: 20px;
+  height: 20px;
+}
+
+#card{
+  max-width: 200px;
+  margin: 0%;
+  /* border-style: double;
+  border-color: blue; */
+}
+
+
+#Categories{
+  color:white;
+  background-color: #1c1c1c;
+}
+
+#card h3{
+  font-size: 15px;
+  max-width: 200px;
+  /*text-align: center;
+  border-style: double;
+  border-color: blue;
+  background-color: silver; */
+}
+
+#wholeCard {
+  align-items: center;
+  justify-content: center;
+}
+
+#hiddenforhover{
+  opacity: 0;
+}
+
+
+.active, #wholeCard:hover #hiddenforhover {
+transition: opacity .7s ease-in-out;
+opacity: 1;
+}
+
+#wholeCard:hover img {
+  transition: width .7s ease-in-out, height .7s ease-in-out;
+  position: relative;
+  width: 250px;
+  height: 375px;
+  display: flex;
+}
+
+#wholeCard:hover  {
+  transition: border .7s, width .7s ease-in-out;
+  width: 250px;
+  border: solid 1px #333
+}
+
+
+
+nav{
+  padding-bottom: 1%;
+}
+
 
