@@ -20,7 +20,7 @@ function Container ({movieInfo, movieSearch, movieLoad}) {
     const filteredFilms = sortedMovieInfo.filter(films => films.title.toLowerCase().includes(movieSearch.toLowerCase()))
 
     if (!movieLoad) {
-        return <h1>Getflix</h1>
+        return <h1 id="getflix"> </h1>
      }
 
     return( 
@@ -54,7 +54,7 @@ function Container ({movieInfo, movieSearch, movieLoad}) {
                 <h3>Galen Sato's Featured Films</h3>
                 <div id='Galen_nav_bar'>
                     {filteredFilms.map(film =>{
-                        if(film.titleType === "Galens_movies"){
+                        if(film.AltTitleType === "galen"){
                             return(
                                 <div id = "card">
                                     <Card key={film.id} film={film}/>
@@ -66,7 +66,7 @@ function Container ({movieInfo, movieSearch, movieLoad}) {
                 <h3>Serial Killers</h3>
                 <div id='SerialKiller_navbar'>
                     {filteredFilms.map(film =>{
-                        if(film.titleType === "Serial_Killers"){
+                        if(film.AltTitleType === "serial"){
                             return(
                                 <div id = "card">
                                     <Card key={film.id} film={film}/>

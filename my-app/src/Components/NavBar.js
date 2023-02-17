@@ -8,13 +8,12 @@ function NavBar({movieSearch, setSearch, type, newMovie, show}) {
     return (
         <header>
             <nav>
-                <Link to='/'>Home</Link>
-                {type ? renderType : null}
-                <Link to='/add'>Add Movie/Tv Show</Link>
-            </nav>
-            <div>
+                <span className="spanNav"><Link to='/'>Home</Link></span>
+                <span className="spanNav">{type ? renderType : null}</span>
+                <span className="spanNav"><Link to='/add'>Add Movie/Tv Show</Link></span>
                 <Search movieSearch={movieSearch} setSearch={setSearch}/>
-            </div>
+            </nav>
+            
         </header>
 
         

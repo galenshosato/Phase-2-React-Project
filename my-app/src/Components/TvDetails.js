@@ -20,7 +20,7 @@ function TvDetails ({show, setShow, setType}) {
 
 
     if (!isLoaded) {
-        return <h1>Getflix</h1>
+        return <h1 id="getflix"> </h1>
     }
 
     const url0 = `https://www.imdb.com${show.principals[0].id}`
@@ -31,24 +31,29 @@ function TvDetails ({show, setShow, setType}) {
     const endYear = show.seriesEndYear ? <span>Ended: {show.seriesEndYear}</span> : <span>Next Episode: <a href={episodeUrl} target= "_blank">{modUrl}</a></span>
 
     return (
-        <div>
-            <img src={show.image.url} alt={show.title}/>
-            <div>
+        <div className="details">
+            <img className="imgDetails" src={show.image.url} alt={show.title}/>
+            <div className="detailName">
                 <h2>{show.title}</h2>
             </div>
-            <div>
+            <div className="detailAtts">
                 <span>Episodes: {show.numberOfEpisodes}</span>
                 <span>Runtime: {show.runningTimeInMinutes} min</span>
-                {show.seriesStartYear ? <span>Started: {show.seriesStartYear}</span> : null}
-                {show.seriesStartYear ? endYear : null}
-
+                <ul className="detailList">
+                 <li>{show.seriesStartYear ? <span>Started: {show.seriesStartYear}</span> : null}</li>
+                 <li>{show.seriesStartYear ? endYear : null}</li>
+                </ul>
             </div>
-            <div>
-                <h4>Actors: 
-                    <a href={url0} target="_blank">{show.principals[0].name}</a>
-                    <a href={url1} target="_blank">{show.principals[1].name}</a>
-                    <a href={url2} target="_blank">{show.principals[2].name}</a>
-                </h4>
+            <div className="actor">
+                <h4>Actors</h4> 
+                     <ul className='actorList' >
+                        <li><a href={url0} target="_blank">{show.principals[0].name}</a></li>
+                        <li><a href={url1} target="_blank">{show.principals[1].name}</a></li>
+                        <li><a href={url2} target="_blank">{show.principals[2].name}</a></li>
+                    </ul>
+            </div>
+            <div className="description">
+                <i>{show.description}</i>
             </div>
         </div>
         

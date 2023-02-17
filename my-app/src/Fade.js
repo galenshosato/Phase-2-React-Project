@@ -9,9 +9,12 @@ import "./index.css"
 
 
 function Fade() {
-  const setHeight ={height: 200}
+  const setHeight ={height: 200,
+                    backgroundColor: 'black'}
+  
+
   return (
-  <div   style= {setHeight} className="neonText">
+  <div   style={setHeight} className="neonText" id="fadeBox">
     <Carousel fade>
       <Carousel.Item>
         <img style={setHeight}
@@ -33,7 +36,7 @@ function Fade() {
         />
       
         <Carousel.Caption>
-          <h1>Peter Dingle starring in Game of Thrones</h1>
+          <h1>Peter Dinklage starring in Game of Thrones</h1>
           <p></p>
         </Carousel.Caption>
         </Carousel.Item>
