@@ -20,7 +20,7 @@ function Container ({movieInfo, movieSearch, movieLoad}) {
     const filteredFilms = sortedMovieInfo.filter(films => films.title.toLowerCase().includes(movieSearch.toLowerCase()))
 
     if (!movieLoad) {
-        return <h1>Getflix</h1>
+        return <h1 id="getflix"> </h1>
      }
 
     return( 

@@ -19,7 +19,7 @@ function MovieDetails ({newMovie, setNewMovie, setType}) {
 
 
     if (!isLoaded) {
-        return <h1>Getflix</h1>
+        return <h1 id="getflix"> </h1>
     }
 
     
@@ -30,23 +30,24 @@ function MovieDetails ({newMovie, setNewMovie, setType}) {
     const url2 = `https://www.imdb.com${newMovie.principals[2].id}`
 
     return (
-        <div>
-            <img src={newMovie.image.url} alt={newMovie.title}/>
-            <div>
+        <div className='details'>
+            <img className="imgDetails" src={newMovie.image.url} alt={newMovie.title}/>
+            <div className="detailName">
                 <h2>{newMovie.title}</h2>
             </div>
-            <div>
+            <div className="detailAtts">
                 {newMovie.year ? <span>Year: {newMovie.year}</span> : null}
                 {newMovie.runningTimeInMinutes ? <span>Runtime: {movieHour}h {movieMin}min</span> : null}
             </div>
-            <div>
-                <h4>Actors: 
-                    <a href={url0} target="_blank">{newMovie.principals[0].name}</a>
-                    <a href={url1} target="_blank">{newMovie.principals[1].name}</a>
-                    <a href={url2} target="_blank">{newMovie.principals[2].name}</a>
-                </h4>
+            <div className='actor'>
+                <h4>Actors</h4> 
+                    <ul className='actorList' >
+                        <li><a href={url0} target="_blank">{newMovie.principals[0].name}</a></li>
+                        <li><a href={url1} target="_blank">{newMovie.principals[1].name}</a></li>
+                        <li><a href={url2} target="_blank">{newMovie.principals[2].name}</a></li>
+                    </ul>
             </div>
-            <div>
+            <div className="description">
                 <i>{newMovie.description}</i>
             </div>
         </div>
