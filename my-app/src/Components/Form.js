@@ -53,7 +53,8 @@ function Form ({setMovies, setMovieLoad}) {
 
 
     return (
-        <form onSubmit={handleSubmit}>
+        <form className="form" onSubmit={handleSubmit}>
+            <h3>Contribute to Getflix!</h3>
             <div>
                 <input
                     type='text'
@@ -74,7 +75,7 @@ function Form ({setMovies, setMovieLoad}) {
                     name='type'
                     value='movie'
                 />
-                <label>Movie</label>
+                <label className="radioLab">Movie</label>
             </div>
             <div>
                 <input
@@ -82,7 +83,7 @@ function Form ({setMovies, setMovieLoad}) {
                     name='type'
                     value='tvSeries'
                     />
-                <label>Tv Show</label>
+                <label className="radioLab">Tv Show</label>
             </div>
             <div>
                 <input 
