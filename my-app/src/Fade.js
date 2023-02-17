@@ -9,10 +9,12 @@ import "./index.css"
 
 
 function Fade() {
-  const setHeight ={height: 200}
+  const setHeight ={height: 200,
+                    backgroundColor: 'black'}
+  
 
   return (
-  <div   style= {setHeight} className="neonText" id="fadeBox">
+  <div   style={setHeight} className="neonText" id="fadeBox">
     <Carousel fade>
       <Carousel.Item>
         <img style={setHeight}
