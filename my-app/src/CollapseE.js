@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-import Button from 'react-bootstrap/Button';
 import Collapse from 'react-bootstrap/Collapse';
 import Fade from './Fade'
 import Slider from  './Slider'
+import Button from 'react-bootstrap/Button';
+
 
 
 

@@ -30,7 +30,7 @@ function Container ({movieInfo, movieSearch, movieLoad}) {
                 <h3>TV Shows</h3>
                 <div id='TVshowNavBar'>
                 {filteredFilms.map(film =>{
-                    if(film.titleType === 'tvSeries'){
+                    if(film.titleType === 'tvSeries' && film.AltTitleType === null){
                         return(
                             <div id = "card">
                                 <Card key={film.id} film={film} />
@@ -42,7 +42,7 @@ function Container ({movieInfo, movieSearch, movieLoad}) {
                 <h3>Movies</h3>
                 <div id='MovieNavBar'>
                     {filteredFilms.map(film =>{
-                        if(film.titleType === 'movie'){
+                        if(film.titleType === 'movie' && film.AltTitleType === null){
                             return(
                                 <div id = "card">
                                     <Card key={film.id} film={film}/>

@@ -30,7 +30,8 @@ function Form ({setMovies, setMovieLoad}) {
             },
             titleType: event.target.type.value,
             principals : actorHandle(event.target.actors.value),
-            description : event.target.description.value
+            description : event.target.description.value,
+            AltTitleType: null,
         }
 
         fetch('http://localhost:4000/MovieList', {
